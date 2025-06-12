@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>æææææææææææ</title>
+    <style>
+
+        .notification {
+    position: fixed; /* Set position to fixed */
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #10bf00;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 10px;
+            position: relative; /* Ensure it stays inside the container */
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="notification" id="stickyNotification1">
+        <span>€12.99 for a footrub from some nice indian hands</span>
+        <button class="close-btn" onclick="closeNotification('stickyNotification1')">×</button>
+    </div>
+
+   
+    <script>
+        window.onload = function() {
+            // Show the first notification 5 seconds after the page loads
+            setTimeout(function() {
+                showNotification('stickyNotification1');
+            }, 5000);
+        }
+
+        function showNotification(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function closeNotification(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

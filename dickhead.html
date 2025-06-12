@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dickhead</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black; /* Makes the background black */
+        }
+
+        /* Popup Image Styles */
+        .popup-image1, .popup-image2, .popup-image3 {
+            display: none; /* Hidden by default */
+            position: absolute;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .popup-image1 { top: 2%; left: 1%; }
+        .popup-image2 { top: 22%; left: 1%; }
+        .popup-image3 { top: 48%; left: 1%; }
+
+        .popup-image1 img { width: 50%; height: auto; border-radius: 8px; }
+        .popup-image2 img { width: 50%; height: auto; border-radius: 8px; }
+        .popup-image3 img { width: 50%; height: auto; border-radius: 8px; }
+
+        /* Show popup images when the corresponding class is added */
+        body.show-popup1 .popup-image1,
+        body.show-popup2 .popup-image2,
+        body.show-popup3 .popup-image3 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Image Pop-up 1 -->
+    <div class="popup-image1">
+        <img src="images/baby_1.png" alt="Pop-up Image 1">
+    </div>
+
+    <!-- Image Pop-up 2 -->
+    <div class="popup-image2">
+        <img src="images/baby_2.png" alt="Pop-up Image 2">
+    </div>
+
+    <!-- Image Pop-up 3 -->
+    <div class="popup-image3">
+        <img src="images/baby_3.png" alt="Pop-up Image 3">
+    </div>
+
+    <!-- Audio RECEIVED Element -->
+    <audio id="popupRECEIVED">
+        <source src="Audio/messagereceived.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            var sound1 = document.getElementById("popupRECEIVED");
+
+            // Show first popup after 3 seconds
+            setTimeout(function() {
+                document.body.classList.add('show-popup1');
+                sound1.currentTime = 0; // Reset audio playback
+                sound1.play();
+            }, 3000);
+
+            // Show second popup after 8 seconds
+            setTimeout(function() {
+                document.body.classList.add('show-popup2');
+                sound1.currentTime = 0; // Reset audio playback
+                sound1.play();
+            }, 5000);
+
+            // Show third popup after 11 seconds
+            setTimeout(function() {
+                document.body.classList.add('show-popup3');
+                sound1.currentTime = 0; // Reset audio playback
+                sound1.play();
+            }, 11000);
+        };
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a lot of me a bit of you</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Popup Overlay */
+        .popup-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+           
+            z-index: 999;
+        }
+
+        /* Popup Image Styles */
+        .popup-image1, .popup-image2, .popup-image3, .popup-image4, .popup-image5 {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .popup-image1 { top: -6%; left: 70%; }
+        .popup-image2 { top: 7%; left: 80.5%; }
+        .popup-image3 { top: 18.3%; left: 83%; }
+        .popup-image4 { top: 25%; left: 71.7%; }
+        .popup-image5 { top: 30.6%; left: 82%; }
+
+        .popup-image1 img { width: 70%; height: auto; border-radius: 8px; }
+        .popup-image2 img { width: 110%; height: auto; border-radius: 8px; }
+        .popup-image3 img { width: 106.5%; height: auto; border-radius: 8px; }
+        .popup-image4 img { width: 58%; height: auto; border-radius: 8px; }
+        .popup-image5 img { width: 105%; height: auto; border-radius: 8px; }
+
+        /* Show popup images when the corresponding class is added */
+        body.show-popup1 .popup-image1,
+        body.show-popup2 .popup-image2,
+        body.show-popup3 .popup-image3,
+        body.show-popup4 .popup-image4,
+        body.show-popup5 .popup-image5 {
+            display: block;
+        }
+
+        /* Show overlay when any popup is active */
+        body.show-popup1 .popup-overlay,
+        body.show-popup2 .popup-overlay,
+        body.show-popup3 .popup-overlay,
+        body.show-popup4 .popup-overlay,
+        body.show-popup5 .popup-overlay {
+            display: block;
+        }
+
+        /* Image container styling */
+        #image-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        #map {
+            width: 300%;
+            z-index: 1; /* Ensures map stays behind the painting image */
+        }
+
+        #paintingbraids {
+            position: absolute;
+            left: 1240px; /* Adjust for better relative positioning */
+            top: 576px;  /* Adjust for better relative positioning */
+            width: 15.8%;
+            z-index: 10; /* Ensures painting is on top of the map */
+        }
+
+        #meme {
+            position: absolute;
+            left: 3150px; /* Adjust for better relative positioning */
+            top: 1636px;  /* Adjust for better relative positioning */
+            width: 27.9%;
+            z-index: 10; /* Ensures painting is on top of the map */
+        }
+
+        #husbandmiski {
+            position: absolute;
+            left: 364px; /* Adjust for better relative positioning */
+            top: 1615px;  /* Adjust for better relative positioning */
+            width: 25%;
+            z-index: 10; /* Ensures painting is on top of the map */
+        }
+
+        /* Text Boxes Styling */
+        .text-box-jensen, .text-box-karpe {
+            position: absolute;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #101010;
+            overflow-y: scroll;
+        }
+
+        .text-box-jensen {
+            top: 1150px;
+            left: 1945px;
+            width: 400px;
+            height: 550px;
+        }
+
+        .text-box-karpe {
+            top: 1035px;
+            left: 3420px;
+            width: 330px;
+            height: 400px;
+        }
+
+        /* Video Containers */
+        .video-container1, .video-container2, .video-container3, .video-container4 {
+            position: absolute;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .video-container1 {
+            top: 1522px;
+            left: 3858px;
+            width: 328px;
+            height: 220px;
+        }
+
+        .video-container2 {
+            top: 2105px;
+            left: 1170px;
+            width: 308px;
+            height: 200px;
+        }
+
+        .video-container3 {
+            top: 79px;
+            left: 383px;
+            width: 550px;
+            height: 365px;
+        }
+
+        .video-container4 {
+            top: 1950px;
+            left: 3675px;
+            width: 570px;
+            height: 390px;
+        }
+
+        /* Video player */
+        .video-player1, .video-player2, .video-player3, .video-player4 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text Box Styling for Jensen and Karpe */
+        .text-box-jensen, .text-box-karpe {
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #101010;
+            overflow-y: scroll;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Adjustments for responsiveness */
+        @media (max-width: 768px) {
+            .popup-image1 { top: 10%; left: 50%; width: 80%; }
+            .popup-image2 { top: 20%; left: 50%; width: 80%; }
+            .popup-image3 { top: 30%; left: 50%; width: 80%; }
+            .popup-image4 { top: 40%; left: 50%; width: 80%; }
+            .popup-image5 { top: 50%; left: 50%; width: 80%; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background Overlay -->
+    <div class="popup-overlay"></div>
+
+    <!-- Image Pop-up 1 -->
+    <div class="popup-image1">
+        <img src="images/M4 kopi.png" alt="Pop-up Image 1">
+    </div>
+
+    <!-- Image Pop-up 2 -->
+    <div class="popup-image2">
+        <img src="images/M3 kopi.png" alt="Pop-up Image 2">
+    </div>
+
+    <!-- Image Pop-up 3 -->
+    <div class="popup-image3">
+        <img src="images/M2.png" alt="Pop-up Image 3">
+    </div>
+
+    <!-- Image Pop-up 4 -->
+    <div class="popup-image4">
+        <img src="images/M5.png" alt="Pop-up Image 4">
+    </div>
+
+    <!-- Image Pop-up 5 -->
+    <div class="popup-image5">
+        <img src="images/M1.png" alt="Pop-up Image 5">
+    </div>
+
+    <!-- Audio RECEIVED Element -->
+    <audio id="popupRECEIVED">
+        <source src="Audio/messagereceived.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Audio SENT Element -->
+    <audio id="popupSENT">
+        <source src="Audio/messagesent.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Get sounds once on load
+            var sound1 = document.getElementById("popupRECEIVED");
+            var sound2 = document.getElementById("popupSENT");
+    
+            // Function to start popup sequence
+            function startPopups() {
+                setTimeout(function() {
+                    document.body.classList.add('show-popup1');
+                    sound1.play();
+                }, 8000);
+    
+                setTimeout(function() {
+                    document.body.classList.add('show-popup2');
+                    sound2.play();
+                }, 16000);
+    
+                setTimeout(function() {
+                    document.body.classList.add('show-popup3');
+                    sound2.play();
+                }, 24000);
+    
+                setTimeout(function() {
+                    document.body.classList.add('show-popup4');
+                    sound1.currentTime = 0;
+                    sound1.play();
+                }, 32000);
+    
+                setTimeout(function() {
+                    document.body.classList.add('show-popup5');
+                    sound2.play();
+                }, 37000);
+    
+                // Remove listener after first click
+                document.body.removeEventListener('click', startPopups);
+            }
+    
+            // Wait for user click to start popups and sounds
+            document.body.addEventListener('click', startPopups);
+        };
+    
+        // Overlay click handler remains the same
+        document.querySelector('.popup-overlay').addEventListener('click', function() {
+            document.body.classList.remove('show-popup1');
+            document.body.classList.remove('show-popup2');
+            document.body.classList.remove('show-popup3');
+            document.body.classList.remove('show-popup4');
+            document.body.classList.remove('show-popup5');
+        });
+    </script>
+    
+
+    <!-- Image container for map and painting -->
+    <div id="image-container">
+        <!-- Background Map Image -->
+        <img src="images/white page kopi.jpg" id="map">
+
+        <!-- Painting Image -->
+        <a href="Patti.html">
+            <img src="images/image00001.jpg" id="paintingbraids">
+        </a>
+        <a href="dickhead.html">
+            <img src="images/husbandmiski.png" id="husbandmiski">
+        </a>
+
+        <a href="ibetonlosingdogs.html">
+            <img src="images/meme.png" id="meme">
+        </a>
+
+    </div>
+
+
+    <!-- Text Box Jensen -->
+    <div class="text-box-jensen">
+        <p>
+            <!-- Your long text content goes here -->
+            <b>White Boy, Jensen McRae</b> <br/>Now my hair smells like smoke<br/>
+            Something's burning, I don't know what it is<br/>
+            I won't laugh at your dumbass jokes, white boy<br/>
+            I don't owe you anything<br/>
+            I am learning not to sing for you<br/>
+            Your cage is not Maya Angelou's, white boy<br/>
+            You've still got a grip on me<br/>
+            Sword to hilt, hand to God<br/>
+            Bring me to my knees<br/>
+            If I stand down, if I bleed<br/>
+            If I am what you ask me to be<br/>
+            White boy, what will you make of me?<br/>
+            Passion play, almost biblical<br/>
+            White girl arrives, I turn invisible<br/>
+            I don't like who I am to you, white boy<br/>
+            Trance state, you're hypnotic<br/>
+            Twirl my hair, watch my voice jump the octave<br/>
+            I don't like who I am for you, white boy<br/>
+            But you've still got a grip on me<br/>
+            Sword to hilt, hand to God<br/>
+            Bring me to my knees<br/>
+            If I stand down, if I bleed<br/>
+            If I am what you ask me to be<br/>
+            White boy, what will you make of me?<br/>
+            You've still got a grip on me<br/>
+            Sword to hilt, hand to God<br/>
+            Bring me to my knees<br/>
+            If I stand down, if I bleed<br/>
+            If I am what you ask me to be<br/>
+            White boy, what will you make of me?<br/>
+            What will you make of me?<br/>
+            What will you make of me?<br/>
+        </p>
+    </div>
+
+    <!-- Text Box Karpe -->
+    <div class="text-box-karpe">
+        <p>
+            <!-- Your long text content goes here -->
+            <b>Kunsten å være inder, Karpe</b> <br/>Snakker vi om selvironi har jeg mer enn masse, <br/>
+            ser teit ut på ski og hadde bart i første klasse.<br/>
+            Mange spådde meg en framtid som ryddegutt,<br/>
+            men du veit jeg bryter ut og bynt å bytte myter ut,<br/>
+            for det er fakta at svartinga er overalt,<br/>
+            og VG vet at de står bak når hvem som helst er overfalt.<br/>
+            Kommer til landet ditt, tar med seg en masse dritt,<br/>
+            selger hasj og kebab til barnet ditt<br/>
+            De bor der du bor og det begynner å bli farlig<br/>
+            for igår kom dattra di hjem med en som heter Ali.<br/>
+            Han hadde BMW og den var ganske shina,<br/>
+            midtskill med gelé og Buffalo på beina.<br/>
+            Du gjør det du bør å kaster han på dør,<br/>
+            for du kanke se for deg dattra di gå med slør.<br/>
+            Det er ville tilstander i Tigerstaden,<br/>
+            og er du bitte litt brun så er du bitte litt Bin Laden.<br/>
+            Men jeg har lært at man må være smart, lære snart<br/>
+            at jg må gi forklaringa på hvert jævla æresdrap.<br/>
+            Og du kan si: Chico overdriver nå,<br/>
+            ja og du kan si: EEEy tenk over hva du sier nå!<br/>
+            Men jeg har fått nok og orker ikke mer lenger.<br/>
+            Jeg går på fest og chicksa spør meg om B-gjengen.<br/>
+            Du hvorfor er du veggis, hva vet du om Al-quaida?<br/>
+            Jeg vet at ikke du er sånn.<br/>
+            så hvorfor spør u meg da?<br/>
+            Født og bor i ett land du vil ha meg ut av,<br/>
+            pass deg, pass deg bunad blir burka (x2)<br/>
+            Du vil gi flyktinger vaskejobb og norsk-tester,<br/>
+            jeg stemmer gatas parlament og gir de whimsical til borgemester.<br/>
+            Stammer fra ett land med lite mat og lite klær,<br/>
+            der penga går til folk som har fra før gevær og militær.<br/>
+            Jeg har sett det sjæl, jeg lover deg det er ille der,<br/>
+            heldig som bor i nord, det er kaldt, men jeg chillern her.<br/>
+            Så ikke misforstå, glad jeg bor i Norge,<br/>
+            men jeg er forsatt feil mann med feil navn og farge.<br/>
+            Mange tror at Karpe Diem skaper mer vold,<br/>
+            og sier fler bisarre ting enn den feite karen i D12<br/>
+            jeg og Magdi har en bra plan som Egon,<br/>
+            vi trenger bare noen gærninger som tør å være med på`n.<br/>
+            For hvis du tør å ta liv av Carl-Ivar,<br/>
+            da har du mere guts og baller enn hva vi har.<br/>
+            Du hater Chirag mer enn Chirag hater skidag,<br/>
+            vi er jo brødre så hvorfor lage jihad?<br/>
+            Så før jeg slutter la meg si enda en ting til,<br/>
+            drep meg for fargen min og skap en Benjamin til.<br/>
+        </p>
+    </div>
+
+    <!-- Video Containers -->
+    <div class="video-container1">
+        <video id="myVideo1" controls>
+            <source src="videoes/Utennavn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-container2">
+        <video id="myVideo2" controls>
+            <source src="videoes/cutlery.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-container3">
+        <video id="myVideo3" controls>
+            <source src="videoes/visitingmalaysia2024.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-container4">
+        <video id="myVideo4" controls>
+            <source src="videoes/santalucia,norway.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>

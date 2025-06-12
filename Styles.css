@@ -1,0 +1,592 @@
+
+body.red-background-page {
+    background-color: #ce0000;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    property2: value;
+    position: relative;
+    left: 15px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:400%
+    
+}
+
+p {
+    color: rgb(38, 38, 38);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: large;
+    line-height: 190%;
+    position: relative;
+    left: 15px;
+}
+blockquote {
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: medium;
+    font-style: italic;
+    color: rgb(255, 239, 16);
+    opacity: 70%;
+}
+
+header{
+    background: #ce0000;
+    padding: 5px 15px; 
+}
+
+li {
+    display:inline;
+}
+
+ 
+.image-container {
+    display: flex;
+    gap: 10px; /* Optional: adds space between images */
+}
+
+.image-container .abir-image {
+    width: 420px; /* Adjust the width for the first image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 380px;
+}
+
+.image-container .asia-society-image {
+    width: 850px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 380px;
+}
+
+.image-container .abi3-image {
+    width: 1100px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 380px;
+}
+
+.image-container .abi4-image {
+    width: 800px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 380px;
+}
+
+.image-container .abi5-image {
+    width: 550px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 380px;
+}
+
+.image-container .Ghost  {
+    width: 800px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .Ghost2  {
+    width: 850px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .Ghost3  {
+    width: 850px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .Ghost4  {
+    width: 550px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .gailw-image  {
+    width: 900px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 400px;
+    
+}
+
+.image-container .gailw2-image  {
+    width: 650px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 400px;
+    
+}
+
+.image-container .gailw3-image  {
+    width: 650px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 400px;
+    
+}
+
+.image-container .gailw4-image  {
+    width: 550px; /* Adjust the width for the second image */
+    height: auto; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 400px;
+    
+}
+
+.image-container .Nish1-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish2-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish3-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish4-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish5-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish6-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .Nish7-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 800px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+    
+}
+
+.image-container .JUDE1  {
+    width: auto; /* Adjust the width for the second image */
+    height: 600px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JUDE2  {
+    width: auto; /* Adjust the width for the second image */
+    height: 600px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JUDE3  {
+    width: auto; /* Adjust the width for the second image */
+    height: 600px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JUDE4  {
+    width: auto; /* Adjust the width for the second image */
+    height: 600px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JohnC1-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 700px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JohnC2-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 700px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+.image-container .JohnC4-image  {
+    width: auto; /* Adjust the width for the second image */
+    height: 700px; /* Ensures the original aspect ratio is maintained */
+    position: relative;
+    top: 30px;
+}
+
+
+#AbiKar {
+    position: relative;
+    left: 60px;
+    top: -120px;
+
+}
+
+#Kha {
+    position: relative;
+    left: 100px;
+    top: -920px;
+
+}
+
+#Shih {
+    position: relative;
+    left: 1800px;
+    top: 600px;
+}
+
+#SunGup {
+    position: relative;
+    left: -100px;
+    top: 100px;
+}
+
+#Minf {
+    position: relative;
+    left: 40px;
+    top: -580px;
+}
+
+#Minf2 {
+    position: relative;
+    left: -290px;
+    top: -210px;
+}
+
+#YePe {
+    position: relative;
+    left: 700px;
+    top: 110px;
+}
+
+#Gail {
+    position: relative;
+    left: 790px;
+    top: -60px;
+}
+#Nish {
+    position: relative;
+    left: 1500px;
+    top: -760px;
+}
+
+#Ape {
+    position: relative;
+    left: 130px;
+    top: -450px;
+}
+
+
+#Brah {
+    position: relative; 
+    left: 160px;
+    top: 90px;
+}
+
+#SciBrah {
+    position: relative; 
+    left: 170px;
+    top: 290px;
+}
+
+#Said {
+    position: relative; 
+    left: 50px;
+    top: 20px;
+}
+
+#Jude {
+    position: relative;
+    left: -620px;
+    top: -150px;
+}
+
+#Exist {
+    position: relative;
+    left: -30px;
+    top: -860px;
+}
+
+#Asia {
+    position: relative;
+    left: 1000px;
+    top: -160px;
+}
+
+#FabMo {
+    position: relative;
+    left: 1550px;
+    top: -1250px;
+}
+
+#Ken {
+    position: relative;
+    left: 1050px;
+    top: -900px;
+}
+
+#Keer {
+    position: relative;
+    left: -280px;
+    top: -1400px;
+}
+
+#Karpe {
+    position: relative;
+    left: 450px;
+    top: -650px;
+}
+
+#Guy {
+    position: relative;
+    left: 200px;
+    top: -450px;
+}
+
+#Simrah {
+    position: relative;
+    left: 163px;
+    top: -420px;
+}
+
+#JohnC {
+    position: relative;
+    left: 450px;
+    top: -600px;
+}
+
+#mitski {
+    position: relative;
+    left: 570px;
+    top: -1150px;
+}
+
+#Patti {
+    position: relative;
+    left: 67px;
+    top: 180px;
+}
+
+.custom-bg {
+    background-color: #f1f1e9;  /* Set any color you prefer */
+}
+
+#Cover {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 184, 18);
+}
+
+#stickyNotification1 {
+    background-color: #f9375b; /* Specific style for the first notification */
+    position:fixed;
+    top: 2%;
+    right: 1%;
+    bottom: auto;
+    left: 75%;
+    border-radius: 40px;
+}
+
+
+.notification span {
+    flex-grow: 1;
+}
+
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+#base-image {
+    width: 100%;
+    height: auto;
+}
+
+#overlay-image-1 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hide the overlay image */
+    z-index: 10; /* Ensure it appears above the base image */
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#overlay-image-2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hide the overlay image */
+    z-index: 10; /* Ensure it appears above the base image */
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#overlay-image-3 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hide the overlay image */
+    z-index: 10; /* Ensure it appears above the base image */
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#overlay-image-4 {
+    position: absolute;
+    top:20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hide the overlay image */
+    z-index: 10; /* Ensure it appears above the base image */
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#vid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Optional: maintain aspect ratio */
+    z-index: -1; /* Ensure the video is behind other content */
+    
+}
+
+.invisible-word:hover {
+    opacity: 0; /* Make the word invisible when hovering */
+}
+
+/* Unvisited link */
+a:link {
+    color: rgb(255, 242, 0);
+}
+
+/* Visited link */
+a:visited {
+    color: rgb(255, 242, 0);
+}
+
+
+.text-box-jensen {
+    position: absolute;
+    top: 1150px; /* Adjust the position as needed */
+    left: 1945px; /* Adjust the position as needed */
+    width: 400px; /* Set the desired width */
+    height: 550px; /* Set the desired height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    background-color: #ffffff; 
+    padding: 10px;
+    border: 1px solid #101010; /* Optional: Add a border */
+}
+
+.text-box-karpe {
+    position: absolute;
+    top: 1035px; /* Adjust the position as needed */
+    left: 3420px; /* Adjust the position as needed */
+    width: 330px; /* Set the desired width */
+    height: 400px; /* Set the desired height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    background-color: #ffffff; 
+    padding: 10px;
+    border: 1px solid #101010; /* Optional: Add a border */
+}
+
+
+.video-container1 {
+    position: absolute;
+    top: 1522px; /* Adjust the position as needed */
+    left: 3858px; /* Adjust the position to move it to the left */
+    width: 328px; /* Set the desired width */
+    height: 220px; /* Set the desired height */
+    overflow: hidden; /* Ensures the video fits within the container */
+    background-color: #000; /* Optional: background color to show behind video if needed */
+}
+
+.video-container2 {
+    position: absolute;
+    top: 2105px; /* Adjust the position as needed */
+    left: 1170px; /* Adjust the position to move it to the left */
+    width: 308px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    overflow: hidden; /* Ensures the video fits within the container */
+    background-color: #000; /* Optional: background color to show behind video if needed */
+}
+
+.video-container3 {
+    position: absolute;
+    top: 79px; /* Adjust the position as needed */
+    left: 383px; /* Adjust the position to move it to the left */
+    width: 550px; /* Set the desired width */
+    height: 365px; /* Set the desired height */
+    overflow: hidden; /* Ensures the video fits within the container */
+    background-color: #000; /* Optional: background color to show behind video if needed */
+}
+
+.video-container4 {
+    position: absolute;
+    top: 1950px; /* Adjust the position as needed */
+    left: 3675px; /* Adjust the position to move it to the left */
+    width: 570px; /* Set the desired width */
+    height: 390px; /* Set the desired height */
+    overflow: hidden; /* Ensures the video fits within the container */
+    background-color: #000; /* Optional: background color to show behind video if needed */
+}
+
+
+.video-player1 {
+    position: relative; /* Change from absolute to relative */
+    width: 100%; /* Set the width to fill the container */
+    height: 100%; /* Set the height to fill the container */
+}
+
+/* Video element */
+video {
+    width: 100%; /* Ensures the video fits within the container's width */
+    height: 100%; /* Ensures the video fits within the container's height */
+    object-fit: cover; /* Ensures the video covers the container without distortion */
+}
+
