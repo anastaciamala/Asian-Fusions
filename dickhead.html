@@ -63,9 +63,9 @@
         <img src="images/baby_3.png" alt="Pop-up Image 3">
     </div>
 
-    <!-- Audio -->
+    <!-- Audio (Safari fix: use audio/mp4 for .m4a) -->
     <audio id="popupRECEIVED">
-        <source src="Audio/messagereceived.m4a" type="audio/mpeg">
+        <source src="Audio/messagereceived.m4a" type="audio/mp4">
         Your browser does not support the audio element.
     </audio>
 
@@ -80,24 +80,34 @@
 
             var sound1 = document.getElementById("popupRECEIVED");
 
-            // Popups and audio after interaction
-            setTimeout(function() {
-                document.body.classList.add('show-popup1');
+            // Safari trick: mute, play, pause, unmute to unlock audio
+            sound1.muted = true;
+            sound1.play().then(() => {
+                sound1.pause();
                 sound1.currentTime = 0;
-                sound1.play();
-            }, 3000);
+                sound1.muted = false;
 
-            setTimeout(function() {
-                document.body.classList.add('show-popup2');
-                sound1.currentTime = 0;
-                sound1.play();
-            }, 5000);
+                // Start popup + audio playback sequence
+                setTimeout(function () {
+                    document.body.classList.add('show-popup1');
+                    sound1.currentTime = 0;
+                    sound1.play();
+                }, 3000);
 
-            setTimeout(function() {
-                document.body.classList.add('show-popup3');
-                sound1.currentTime = 0;
-                sound1.play();
-            }, 11000);
+                setTimeout(function () {
+                    document.body.classList.add('show-popup2');
+                    sound1.currentTime = 0;
+                    sound1.play();
+                }, 5000);
+
+                setTimeout(function () {
+                    document.body.classList.add('show-popup3');
+                    sound1.currentTime = 0;
+                    sound1.play();
+                }, 11000);
+            }).catch(function (error) {
+                console.error("Safari blocked audio:", error);
+            });
         });
     </script>
 </body>
