@@ -123,6 +123,7 @@
             height: 400px;
         }
 
+
         /* Video Containers */
         .video-container1, .video-container2, .video-container3, .video-container4 {
             position: absolute;
@@ -190,6 +191,26 @@
             .popup-image5 { top: 50%; left: 50%; width: 80%; }
         }
 
+         /* ==== Added CSS for CLICK text ==== */
+         #clickText {
+            display: none;
+            font-size: 300px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            color: red;
+            opacity: 65%;
+            letter-spacing: 4px;
+            text-align: center;
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2000;
+            padding: 20px;
+            border-radius: 20px;
+            user-select: none;
+        }
+
     </style>
 </head>
 <body>
@@ -233,57 +254,71 @@
         Your browser does not support the audio element.
     </audio>
 
+      <!-- ==== CLICK text div ==== -->
+      <div id="clickText">click</div>
+
     <script>
-        window.onload = function() {
-            // Get sounds once on load
-            var sound1 = document.getElementById("popupRECEIVED");
-            var sound2 = document.getElementById("popupSENT");
-    
-            // Function to start popup sequence
-            function startPopups() {
-                setTimeout(function() {
-                    document.body.classList.add('show-popup1');
-                    sound1.play();
-                }, 8000);
-    
-                setTimeout(function() {
-                    document.body.classList.add('show-popup2');
-                    sound2.play();
-                }, 16000);
-    
-                setTimeout(function() {
-                    document.body.classList.add('show-popup3');
-                    sound2.play();
-                }, 24000);
-    
-                setTimeout(function() {
-                    document.body.classList.add('show-popup4');
-                    sound1.currentTime = 0;
-                    sound1.play();
-                }, 32000);
-    
-                setTimeout(function() {
-                    document.body.classList.add('show-popup5');
-                    sound2.play();
-                }, 37000);
-    
-                // Remove listener after first click
-                document.body.removeEventListener('click', startPopups);
-            }
-    
-            // Wait for user click to start popups and sounds
-            document.body.addEventListener('click', startPopups);
-        };
-    
-        // Overlay click handler remains the same
-        document.querySelector('.popup-overlay').addEventListener('click', function() {
-            document.body.classList.remove('show-popup1');
-            document.body.classList.remove('show-popup2');
-            document.body.classList.remove('show-popup3');
-            document.body.classList.remove('show-popup4');
-            document.body.classList.remove('show-popup5');
-        });
+        window.onload = function () {
+    // Get audio elements
+    var sound1 = document.getElementById("popupRECEIVED");
+    var sound2 = document.getElementById("popupSENT");
+
+    // Function to unlock and start popup sequence
+    function startPopups() {
+        // Attempt to unlock audio by playing and pausing instantly
+        sound1.play().then(() => sound1.pause()).catch(() => {});
+        sound2.play().then(() => sound2.pause()).catch(() => {});
+
+        // Run the timed popups and sounds
+        setTimeout(function () {
+            document.body.classList.add('show-popup1');
+            sound1.currentTime = 0;
+            sound1.play();
+        }, 8000);
+
+        setTimeout(function () {
+            document.body.classList.add('show-popup2');
+            sound2.currentTime = 0;
+            sound2.play();
+        }, 16000);
+
+        setTimeout(function () {
+            document.body.classList.add('show-popup3');
+            sound2.currentTime = 0;
+            sound2.play();
+        }, 24000);
+
+        setTimeout(function () {
+            document.body.classList.add('show-popup4');
+            sound1.currentTime = 0;
+            sound1.play();
+        }, 32000);
+
+        setTimeout(function () {
+            document.body.classList.add('show-popup5');
+            sound2.currentTime = 0;
+            sound2.play();
+        }, 37000);
+
+        // Remove listener so it only triggers once
+        document.body.removeEventListener('click', startPopups);
+    }
+
+    // Start sequence on first user click
+    document.body.addEventListener('click', startPopups);
+
+    // Hide CLICK text immediately on any click
+    document.body.addEventListener('click', function () {
+        document.getElementById('clickText').style.display = 'none';
+    });
+
+    // Show CLICK text 1 second after load
+    setTimeout(function () {
+        document.getElementById('clickText').style.display = 'block';
+    }, 1000);
+};
     </script>
+    
     
 
     <!-- Image container for map and painting -->
@@ -400,7 +435,7 @@
     <!-- Video Containers -->
     <div class="video-container1">
         <video id="myVideo1" controls>
-            <source src="videoes/Utennavn.mp4" type="video/mp4">
+            <source src="videoes/normalgirl.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>

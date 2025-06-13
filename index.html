@@ -1,60 +1,421 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>asians are next in line to disappear</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>asians are next in line to disappear</title>
+  <link rel="stylesheet" href="Styles.css" />
+  <style>
+    #clickPrompt {
+        display: none;
+            font-size: 300px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            color: rgb(255, 239, 16);
+            opacity: 50%;
+            letter-spacing: 4px;
+            text-align: center;
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2000;
+            padding: 20px;
+            border-radius: 20px;
+            user-select: none;
+        }
 
-        <link rel="stylesheet" href="Styles.css">
-    </head>
-    <body style="background-color: #000000;">
-        <section>
-            <video loop autoplay controls muted playsinline id="vid">
-                <source src="videoes/Sequence03.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        blockquote {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      font-style: italic;
+      letter-spacing: 0.2px;
+      color: rgb(255, 239, 16);
+      opacity: 70%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      box-sizing: border-box;
+      
+    }
 
-            <script>
-                window.addEventListener('load', function() {
-                    var video = document.getElementById('vid');
-                    video.muted = true;
-                    video.play();
-                });
-            </script>
+    /* Ensure the container doesn't restrict blockquote */
+    .text-overlay {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      position: relative;
+      
+    }
+
+  </style>
+</head>
+<body style="background-color: #000000;">
+  <section>
+    <video loop autoplay controls muted playsinline id="vid">
+      <source src="videoes/Sequence03.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="clickPrompt">click</div>
+
+    <script>
+      window.addEventListener('load', function () {
+        // Play video
+        var video = document.getElementById('vid');
+        video.muted = true;
+        video.play();
+
+        // Show "click to start" after 1 second
+        setTimeout(function () {
+          document.getElementById('clickPrompt').style.display = 'block';
+        }, 1000);
+      });
+
+      // Handle audio start on click
+      document.getElementById('clickPrompt').addEventListener('click', function () {
+        var audio = document.getElementById('backgroundAudio');
+        audio.play().then(() => {
+          document.getElementById('clickPrompt').style.display = 'none';
+        }).catch((error) => {
+          console.log('Audio play error:', error);
+        });
+      });
+    </script>
+
 
        <div class="text-overlay">
-        <blockquote>when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
-            this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog when I hear the phrase «asians are next in line to be white,» I repla</blockquote>
+        <blockquote>when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into 
+            this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white»with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">law-abiding</a>, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="asian_diaspora_archive.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">law-abiding</a>, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white»with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white»with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">law-abiding</a>, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="asian_diaspora_archive.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white»with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">law-abiding</a>, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html" class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="asian_diaspora_archive.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are <a href="asian_diaspora_archive.html"class="invisible-word">next</a> in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,»I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,»I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white»with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">accomplished</a>, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word <a href="a_lot_of_me_a_bit_of_you.html"class="invisible-word">«white»</a> with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s amnesiac fog<br/>
+            when I hear the phrase «asians are next in line to be white,» I replace the word «white» with «disappear». we are reputed to be so accomplished, and so law-abiding, we will disappear into this country’s <a href="asian_diaspora_archive.html" class="invisible-word">amnesiac</a> fog</blockquote>
       </div>
 
-      <audio id="backgroundAudio" autoplay loop src="Audio/asiansarenextinlinetobewhite.mp3"></audio>
-      <script>
-          window.addEventListener('load', function() {
-              var audio = document.getElementById('backgroundAudio');
-              audio.play().catch(error => {
-                  console.log('Audio play was prevented:', error);
-                  // You could display a message to the user here asking them to interact with the page
-              });
-          });
-      </script>
-
-    </body>
+      <audio id="backgroundAudio" loop src="Audio/asiansarenextinlinetobewhite.mp3"></audio>
+  </section>
+</body>
 </html>
