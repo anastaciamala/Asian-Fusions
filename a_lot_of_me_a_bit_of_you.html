@@ -257,67 +257,76 @@
       <!-- ==== CLICK text div ==== -->
       <div id="clickText">click</div>
 
-    <script>
+      <script>
         window.onload = function () {
-    // Get audio elements
-    var sound1 = document.getElementById("popupRECEIVED");
-    var sound2 = document.getElementById("popupSENT");
-
-    // Function to unlock and start popup sequence
-    function startPopups() {
-        // Attempt to unlock audio by playing and pausing instantly
-        sound1.play().then(() => sound1.pause()).catch(() => {});
-        sound2.play().then(() => sound2.pause()).catch(() => {});
-
-        // Run the timed popups and sounds
-        setTimeout(function () {
-            document.body.classList.add('show-popup1');
-            sound1.currentTime = 0;
-            sound1.play();
-        }, 8000);
-
-        setTimeout(function () {
-            document.body.classList.add('show-popup2');
-            sound2.currentTime = 0;
-            sound2.play();
-        }, 16000);
-
-        setTimeout(function () {
-            document.body.classList.add('show-popup3');
-            sound2.currentTime = 0;
-            sound2.play();
-        }, 24000);
-
-        setTimeout(function () {
-            document.body.classList.add('show-popup4');
-            sound1.currentTime = 0;
-            sound1.play();
-        }, 32000);
-
-        setTimeout(function () {
-            document.body.classList.add('show-popup5');
-            sound2.currentTime = 0;
-            sound2.play();
-        }, 37000);
-
-        // Remove listener so it only triggers once
-        document.body.removeEventListener('click', startPopups);
-    }
-
-    // Start sequence on first user click
-    document.body.addEventListener('click', startPopups);
-
-    // Hide CLICK text immediately on any click
-    document.body.addEventListener('click', function () {
-        document.getElementById('clickText').style.display = 'none';
-    });
-
-    // Show CLICK text 1 second after load
-    setTimeout(function () {
-        document.getElementById('clickText').style.display = 'block';
-    }, 1000);
-};
-    </script>
+          var sound1 = document.getElementById("popupRECEIVED");
+          var sound2 = document.getElementById("popupSENT");
+    
+          function startPopups() {
+            sound1.play().then(() => sound1.pause()).catch(() => {});
+            sound2.play().then(() => sound2.pause()).catch(() => {});
+    
+            setTimeout(function () {
+              document.body.classList.add('show-popup1');
+              sound1.currentTime = 0;
+              sound1.play();
+            }, 8000);
+    
+            setTimeout(function () {
+              document.body.classList.add('show-popup2');
+              sound2.currentTime = 0;
+              sound2.play();
+            }, 16000);
+    
+            setTimeout(function () {
+              document.body.classList.add('show-popup3');
+              sound2.currentTime = 0;
+              sound2.play();
+            }, 24000);
+    
+            setTimeout(function () {
+              document.body.classList.add('show-popup4');
+              sound1.currentTime = 0;
+              sound1.play();
+            }, 32000);
+    
+            setTimeout(function () {
+              document.body.classList.add('show-popup5');
+              sound2.currentTime = 0;
+              sound2.play();
+            }, 37000);
+    
+            document.body.removeEventListener('click', startPopups);
+          }
+    
+          document.body.addEventListener('click', startPopups);
+    
+          document.body.addEventListener('click', function () {
+            document.getElementById('clickText').style.display = 'none';
+          });
+    
+          setTimeout(function () {
+            document.getElementById('clickText').style.display = 'block';
+          }, 1000);
+    
+          // NEW: Allow popups to close when clicked
+          const popupClasses = ['show-popup1', 'show-popup2', 'show-popup3', 'show-popup4', 'show-popup5'];
+          document.querySelector('.popup-overlay').addEventListener('click', () => {
+            popupClasses.forEach(cls => document.body.classList.remove(cls));
+          });
+    
+          // Also make each popup image individually clickable to close
+          popupClasses.forEach((cls, index) => {
+            const popup = document.querySelector(`.popup-image${index + 1}`);
+            if (popup) {
+              popup.addEventListener('click', () => {
+                document.body.classList.remove(cls);
+              });
+            }
+          });
+        };
+      </script>
+    
     
     
 
