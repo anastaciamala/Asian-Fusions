@@ -261,61 +261,71 @@
         window.onload = function () {
           var sound1 = document.getElementById("popupRECEIVED");
           var sound2 = document.getElementById("popupSENT");
-    
+          var clickText = document.getElementById("clickText");
+      
           function startPopups() {
+            // Prevent double triggering
+            document.body.removeEventListener('click', startPopups);
+      
+            clickText.style.display = "none";
+      
+            // Just play and immediately pause to "prime" sounds (helps on Safari)
             sound1.play().then(() => sound1.pause()).catch(() => {});
             sound2.play().then(() => sound2.pause()).catch(() => {});
-    
-            setTimeout(function () {
+      
+            // Schedule popups with sounds
+            setTimeout(() => {
               document.body.classList.add('show-popup1');
               sound1.currentTime = 0;
               sound1.play();
             }, 8000);
-    
-            setTimeout(function () {
+      
+            setTimeout(() => {
               document.body.classList.add('show-popup2');
               sound2.currentTime = 0;
               sound2.play();
             }, 16000);
-    
-            setTimeout(function () {
+      
+            setTimeout(() => {
               document.body.classList.add('show-popup3');
               sound2.currentTime = 0;
               sound2.play();
             }, 24000);
-    
-            setTimeout(function () {
+      
+            setTimeout(() => {
               document.body.classList.add('show-popup4');
               sound1.currentTime = 0;
               sound1.play();
             }, 32000);
-    
-            setTimeout(function () {
+      
+            setTimeout(() => {
               document.body.classList.add('show-popup5');
               sound2.currentTime = 0;
               sound2.play();
             }, 37000);
-    
-            document.body.removeEventListener('click', startPopups);
           }
-    
-          document.body.addEventListener('click', startPopups);
-    
-          document.body.addEventListener('click', function () {
-            document.getElementById('clickText').style.display = 'none';
-          });
-    
-          setTimeout(function () {
-            document.getElementById('clickText').style.display = 'block';
+      
+          // Show "click" message briefly
+          setTimeout(() => {
+            clickText.style.display = "block";
           }, 1000);
-    
-          // NEW: Allow popups to close when clicked
+      
+          // Wait for user interaction to start
+          document.body.addEventListener('click', startPopups);
+      
+          // Also hide click message when clicked
+          document.body.addEventListener('click', () => {
+            clickText.style.display = "none";
+          });
+      
+          // Allow closing by clicking overlay or image
+          const popupOverlay = document.querySelector('.popup-overlay');
           const popupClasses = ['show-popup1', 'show-popup2', 'show-popup3', 'show-popup4', 'show-popup5'];
-          document.querySelector('.popup-overlay').addEventListener('click', () => {
+      
+          popupOverlay.addEventListener('click', () => {
             popupClasses.forEach(cls => document.body.classList.remove(cls));
           });
-    
-          // Also make each popup image individually clickable to close
+      
           popupClasses.forEach((cls, index) => {
             const popup = document.querySelector(`.popup-image${index + 1}`);
             if (popup) {
@@ -326,6 +336,7 @@
           });
         };
       </script>
+      
     
     
     
